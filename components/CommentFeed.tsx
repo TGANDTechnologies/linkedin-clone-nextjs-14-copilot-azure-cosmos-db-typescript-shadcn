@@ -12,7 +12,7 @@ function CommentFeed({ post }: { post: IPostDocument }) {
 
   return (
     <div className="mt-3 space-y-2">
-      {post?.comments?.map((comment) => (
+      {post?.comments?.map((comment: any) => (
         <div key={comment._id} className="flex space-x-1">
           <Avatar>
             <AvatarImage src={comment.user.userImage} />

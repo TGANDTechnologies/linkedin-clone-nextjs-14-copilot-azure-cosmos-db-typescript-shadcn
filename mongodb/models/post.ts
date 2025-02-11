@@ -100,10 +100,10 @@ PostSchema.statics.getAllPosts = async function () {
 
     return posts.map((post: IPostDocument) => ({
       ...post,
-      _id: post._id.toString(),
+      _id: post._id instanceof mongoose.Types.ObjectId ? post._id.toString() : post._id,
       comments: post.comments?.map((comment: IComment) => ({
         ...comment,
-        _id: comment._id.toString(),
+        _id: comment._id instanceof mongoose.Types.ObjectId ? comment._id.toString() : comment._id,
       })),
     }));
   } catch (error) {
