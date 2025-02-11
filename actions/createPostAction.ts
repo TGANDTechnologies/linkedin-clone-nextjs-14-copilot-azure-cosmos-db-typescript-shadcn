@@ -48,7 +48,7 @@ export default async function createPostAction(formData: FormData) {
 
       // generate current timestamp
       const timestamp = new Date().getTime();
-      const file_name = `${randomUUID()}_${timestamp}.png`;
+      const file_name = `${randomUUID()}_${timestamp}.png` || `.jpeg`;
 
       const blockBlobClient = containerClient.getBlockBlobClient(file_name);
 
@@ -74,8 +74,9 @@ export default async function createPostAction(formData: FormData) {
       await Post.create(body);
     }
   } catch (error: any) {
-    throw new Error("Failed to create post", error);
-  }
+    console.error('Detailed error:', error); // Log the actual error for debugging
+    throw new Error("Failed to create post: " + error.message);
+  };
 
   revalidatePath("/");
 }

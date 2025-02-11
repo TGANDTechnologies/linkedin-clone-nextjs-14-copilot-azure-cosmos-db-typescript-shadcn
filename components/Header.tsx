@@ -16,7 +16,7 @@ async function Header() {
       {/* Logo */}
       <Image
         className="rounded-lg"
-        src="https://links.papareact.com/b3z"
+        src="/m-logo.png"
         width={40}
         height={40}
         alt="logo"

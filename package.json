@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@azure/storage-blob": "^12.17.0",
+    "@azure/storage-blob": "^12.26.0",
     "@clerk/nextjs": "^5.0.1",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -19,9 +19,11 @@
     "clsx": "^2.1.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.372.0",
-    "mongoose": "^8.3.2",
-    "next": "14.2.2",
+    "mongodb": "6.12",
+    "mongoose": "^8.9.6",
+    "next": "^14.2.23",
     "next-themes": "^0.3.0",
+    "process": "^0.11.10",
     "react": "^18",
     "react-dom": "^18",
     "react-query": "^3.39.3",
