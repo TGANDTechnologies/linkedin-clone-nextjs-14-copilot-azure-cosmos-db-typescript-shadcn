@@ -7,7 +7,7 @@ import { Post } from "@/mongodb/models/post";
 import AiChatbot from '@/components/AIChatbot';
 
 
-export default async function FeedPage() {
+export default async function ChatPage() {
     await connectDB();
     const posts = await Post.getAllPosts();
 
