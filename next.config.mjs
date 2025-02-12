@@ -12,8 +12,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "ailinkedin.blob.core.windows.net",
+        hostname: "api.x.ai",
       },
+      {
+        protocol: "https",
+        hostname: "ailinkedin.blob.core.windows.net",
+      }
     ],
   },
 };
